@@ -4,16 +4,13 @@
 ## Description
 The new feature allows up to 4 DAZN customers to watch a sport event from the same “watch room”, which offers synchronized streaming and allows users to interact with each other through a live chat functionality as well as through camera and microphone. This feature is implemented to revolutionize the way users watch our content and make the streaming experience more fun and interactive, which should contribute to increased engagement and retention on the platform.
 
+## Event Definition & Schema
 
 
 
+### 1. Initiation of the Watch Party streaming through CTA click - [PROD-1283](https://duckduckgo.com)
 
-
-## Event Schema and samples
-
-For a better understa
-
-### Initiation of the Watch Party streaming through CTA click
+[Sample]https://github.com/MartaObregon/dazn/edit/main/README.md#####1.-Sample-for-initiation-of-the-Watch-Party-streaming-through-CTA-click 
 |              |                   |  
 | -------------| ------------------|
 | event        | watchPartyStart   |
@@ -23,7 +20,89 @@ For a better understa
 
 
 
+### 2. Successful joining of the Watch Party “room - [PROD-5683](https://duckduckgo.com)
 
+|              |                   |
+| -------------| ------------------|
+| event    | watchPartyJoined     |
+| category     | watch party      | 
+| action       | join|
+| label        | {{watchRoomId}}        | 
+
+
+
+### 3. Being presented with the Watch Party initialization error modal - [PROD-3321](https://duckduckgo.com)
+
+
+|              |                   |
+| -------------| ------------------|
+| event    | error            |
+| category     | watch party error | 
+| action       | modal error shown|
+| label        | true              | 
+
+
+|              |                   |
+| -------------| ------------------|
+| event    | error            |
+| category     | watch party error | 
+| action       | modal error closed|
+| label        | true              | 
+
+###4. Dismissing the error modal through “CLOSE” cta click - - [PROD-1112](https://duckduckgo.com)
+
+#### Sample Datalayer output
+
+
+
+
+## EVENT SCHEMA
+
+|   Event Parameters    |       Type        | Sample         |
+| -------------    | ------------------|----------------|
+| error          | Object            |   {}             |
+| playback       | Object            |   {}             |
+| player         | Object            |   {}             |
+| application    | Object            |   {}             | 
+| watchParty     | Object            |   {}             | 
+| clientId       | String            | "07c53c0f6"    | 
+| customerId       | String          | "1afc44bd767b" |
+| User Agent      | String          | "Mozilla/5.0 (Windows NT 10.0; Win64; x64) " |
+
+|Nested objects{}| Parameters         |  Type | Sample|
+|--------------|-------------------|-------| -----|
+|error        | category       | String| "Video Player Error" |
+|       | code       | String| "API_SERVICE_PLAYBACK_RESUMEPOINTS_UNAVAILABLE" |
+|playback      | articleName       | String| "AWS GP de Canadá | Carrera" |
+|              | articleId         | String| "4ipwu1ze6b7a1az4ztflqyluw"|
+|              | competitionId     | String| "6rqw7bnjivfrz93gae0lboea4"|
+|              | competitionName     | String| "DAZN Linear"|
+|              | sportId     | String| "11qbnjiv23frz93gae1234a4"|
+|              | sportname     | String| "Motor"|
+|              | type     | String| "vod"|
+|player              | playbackSessionId | String| "1655716256365-1afc44bd767b-y44drrjcqtxa18g3arxjz58ge-e91811"|
+|          | liveEdge | Boolean| true|
+|          | playerState | String| "start"|
+|          | videoType | String| "watch party"|
+|application              | type | String| "web.hybrid.2"|
+|                   | version | String| "9.13.0"|
+|                   | device | object| {}|
+|device                  | platform | String| "web"|
+|                   | platform | String| "web"|
+|watchParty         | itemId | String| "17vb4ds80aga7916d0dc6gvbn"|
+|         | itemType | String| "article"|
+|         | itemName | String| "Abierto de Eastbourne | Día 2"|
+|         | watchRoomId | String| "1655716256365-1afc44bd767b-y44drrjc"|
+|         | watchRoomName | String| "ForzaFerrari!!"|
+|         | hostId | String| "07c53c0f6"|
+|         | guestIds | Array| ["2233c0f6", "123450f6", "12346876p"]|
+|         | watchPartyStatus | String| "started"|
+|         | liveChatStarted | Boolean| true |
+
+
+### Sample Datalayer outputs
+
+##### 1. Sample for initiation of the Watch Party streaming through CTA click 
 ```json
 {
     "event": "watchPartyStart",
@@ -63,14 +142,7 @@ For a better understa
 }
 ```
 
-
-|              |                   |
-| -------------| ------------------|
-| event    | watchPartyJoined     |
-| category     | watch party      | 
-| action       | join|
-| label        | {{watchRoomId}}        | 
-
+#### 2. Successful joining of the Watch Party “room
 
 ```json
 {
@@ -117,20 +189,7 @@ For a better understa
     "gtm.uniqueEventId": 102,
 }
 ```
-
-|              |                   |
-| -------------| ------------------|
-| event    | error            |
-| category     | watch party error | 
-| action       | modal error shown|
-| label        | true              | 
-
-|              |                   |
-| -------------| ------------------|
-| event    | error            |
-| category     | watch party error | 
-| action       | modal error closed|
-| label        | true              | 
+### 3. Being presented with the Watch Party initialization error modal
 
 ```json
 
@@ -166,49 +225,20 @@ For a better understa
     "gtm.uniqueEventId": 34,
 }
 ```
+### 4. Dismissing the error modal through “CLOSE” cta click
 
+```json
 
-|   Event Parameters    |       Type        | Sample         |
-| -------------    | ------------------|----------------|
-| error          | Object            |   {}             |
-| playback       | Object            |   {}             |
-| player         | Object            |   {}             |
-| application    | Object            |   {}             | 
-| watchParty     | Object            |   {}             | 
-| clientId       | String            | "07c53c0f6"    | 
-| customerId       | String          | "1afc44bd767b" |
-| User Agent      | String          | "Mozilla/5.0 (Windows NT 10.0; Win64; x64) " |
-
-|Nested objects{}| Parameters         |  Type | Sample|
-|--------------|-------------------|-------| -----|
-|error        | category       | String| "Video Player Error" |
-|       | code       | String| "API_SERVICE_PLAYBACK_RESUMEPOINTS_UNAVAILABLE" |
-|playback      | articleName       | String| "AWS GP de Canadá | Carrera" |
-|              | articleId         | String| "4ipwu1ze6b7a1az4ztflqyluw"|
-|              | competitionId     | String| "6rqw7bnjivfrz93gae0lboea4"|
-|              | competitionName     | String| "DAZN Linear"|
-|              | sportId     | String| "11qbnjiv23frz93gae1234a4"|
-|              | sportname     | String| "Motor"|
-|              | type     | String| "vod"|
-|player              | playbackSessionId | String| "1655716256365-1afc44bd767b-y44drrjcqtxa18g3arxjz58ge-e91811"|
-|          | liveEdge | Boolean| true|
-|          | playerState | String| "start"|
-|          | videoType | String| "watch party"|
-|application              | type | String| "web.hybrid.2"|
-|                   | version | String| "9.13.0"|
-|                   | device | object| {}|
-|device                  | platform | String| "web"|
-|                   | platform | String| "web"|
-|watchParty         | itemId | String| "17vb4ds80aga7916d0dc6gvbn"|
-|         | itemType | String| "article"|
-|         | itemName | String| "Abierto de Eastbourne | Día 2"|
-|         | watchRoomId | String| "1655716256365-1afc44bd767b-y44drrjc"|
-|         | watchRoomName | String| "ForzaFerrari!!"|
-|         | hostId | String| "07c53c0f6"|
-|         | guestIds | Array| ["2233c0f6", "123450f6", "12346876p"]|
-|         | watchPartyStatus | String| "started"|
-|         | liveChatStarted | Boolean| true |
-
-
-
+{
+    "event": "error",
+    "error": {
+        "category": "Watch Party Initialization Error",
+        "code": "API_SERVICE_PLAYBACK_RESUMEPOINTS_UNAVAILABLE"
+    },
+    "clientId": "007c53c0f6",
+    "customerId": "1afc44bd767b",
+    "User Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36",
+    "gtm.uniqueEventId": 35,
+}
+```
 
