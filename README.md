@@ -10,7 +10,8 @@ The new feature allows up to 4 DAZN customers to watch a sport event from the sa
 
 ### 1. Initiation of the Watch Party streaming through CTA click - [PROD-1283](https://duckduckgo.com)
 
-[Sample]https://github.com/MartaObregon/dazn/edit/main/README.md#####1.-Sample-for-initiation-of-the-Watch-Party-streaming-through-CTA-click 
+[Sample output](https://github.com/MartaObregon/dazn/edit/main/README.md#1-sample-for-initiation-of-the-watch-party-streaming-through-cta-click) 
+
 |              |                   |  
 | -------------| ------------------|
 | event        | watchPartyStart   |
@@ -22,6 +23,8 @@ The new feature allows up to 4 DAZN customers to watch a sport event from the sa
 
 ### 2. Successful joining of the Watch Party “room - [PROD-5683](https://duckduckgo.com)
 
+[Sample output](https://github.com/MartaObregon/dazn/edit/main/README.md#1-sample-for-successfull-joining-of-the-watch-party-room) 
+
 |              |                   |
 | -------------| ------------------|
 | event    | watchPartyJoined     |
@@ -32,6 +35,7 @@ The new feature allows up to 4 DAZN customers to watch a sport event from the sa
 
 
 ### 3. Being presented with the Watch Party initialization error modal - [PROD-3321](https://duckduckgo.com)
+[Sample output](https://github.com/MartaObregon/dazn/edit/main/README.md#3-sample-for-being-presented-with-the-watch-party-initialization-error-modal) 
 
 
 |              |                   |
@@ -41,6 +45,8 @@ The new feature allows up to 4 DAZN customers to watch a sport event from the sa
 | action       | modal error shown|
 | label        | true              | 
 
+### 4. Dismissing the error modal through “CLOSE” cta click - - [PROD-1112](https://duckduckgo.com)
+[Sample output](https://github.com/MartaObregon/dazn/edit/main/README.md#4-sample-for-dismissing-the-error-modal-through-close-cta-click) 
 
 |              |                   |
 | -------------| ------------------|
@@ -48,13 +54,6 @@ The new feature allows up to 4 DAZN customers to watch a sport event from the sa
 | category     | watch party error | 
 | action       | modal error closed|
 | label        | true              | 
-
-###4. Dismissing the error modal through “CLOSE” cta click - - [PROD-1112](https://duckduckgo.com)
-
-#### Sample Datalayer output
-
-
-
 
 ## EVENT SCHEMA
 
@@ -142,7 +141,7 @@ The new feature allows up to 4 DAZN customers to watch a sport event from the sa
 }
 ```
 
-#### 2. Successful joining of the Watch Party “room
+#### 2. Sample for successful joining of the Watch Party “room
 
 ```json
 {
@@ -189,7 +188,7 @@ The new feature allows up to 4 DAZN customers to watch a sport event from the sa
     "gtm.uniqueEventId": 102,
 }
 ```
-### 3. Being presented with the Watch Party initialization error modal
+### 3. Sample for being presented with the Watch Party initialization error modal
 
 ```json
 
@@ -225,7 +224,7 @@ The new feature allows up to 4 DAZN customers to watch a sport event from the sa
     "gtm.uniqueEventId": 34,
 }
 ```
-### 4. Dismissing the error modal through “CLOSE” cta click
+### 4. Sample for dismissing the error modal through “CLOSE” cta click
 
 ```json
 
