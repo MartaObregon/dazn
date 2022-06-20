@@ -11,16 +11,17 @@ The new feature allows up to 4 DAZN customers to watch a sport event from the sa
 
 ## Event Schema and samples
 
+For a better understa
+
 ### Initiation of the Watch Party streaming through CTA click
-![The San Juan Mountains are beautiful!](/assets/images/san-juan-mountains.jpg "San Juan Mountains")
-
-
 |              |                   |  
 | -------------| ------------------|
 | event        | watchPartyStart   |
 | category     | watch party       | 
 | action       | start             |
 | label        | {{itemId}}        | 
+
+
 
 
 ```json
