@@ -7,10 +7,10 @@
 
 |   Event Parameters    |       Type        | Sample         |
 | -------------    | ------------------|----------------|
-| error          | Object            |                |
-| playback       | Object            |                |
-| player         | Object            |                |
-| application    | Object            |                | 
+| error          | Object            |   {}             |
+| playback       | Object            |   {}             |
+| player         | Object            |   {}             |
+| application    | Object            |   {}             | 
 | clientId       | String            | "07c53c0f6"    | 
 | customerId       | String          | "1afc44bd767b" |
 | User Agent      | String          | "Mozilla/5.0 (Windows NT 10.0; Win64; x64) " |
