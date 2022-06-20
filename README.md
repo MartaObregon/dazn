@@ -5,13 +5,25 @@
 | action       | start             |
 | label        | {{itemId}}        | 
 
-
+|              |                   |
+| -------------| ------------------|
+| event    | watchPartyJoined     |
+| category     | watch party      | 
+| action       | join|
+| label        | {{watchRoomId}}        | 
 
 |              |                   |
 | -------------| ------------------|
 | event    | error            |
-| category     | Watch Party Error | 
-| action       | modal pop up shown|
+| category     | watch party error | 
+| action       | modal popup shown|
+| label        | true              | 
+
+|              |                   |
+| -------------| ------------------|
+| event    | error            |
+| category     | watch party error | 
+| action       | modal popup closed|
 | label        | true              | 
 
 |   Event Parameters    |       Type        | Sample         |
@@ -20,12 +32,15 @@
 | playback       | Object            |   {}             |
 | player         | Object            |   {}             |
 | application    | Object            |   {}             | 
+| watchParty     | Object            |   {}             | 
 | clientId       | String            | "07c53c0f6"    | 
 | customerId       | String          | "1afc44bd767b" |
 | User Agent      | String          | "Mozilla/5.0 (Windows NT 10.0; Win64; x64) " |
 
-|Nested Entities| Parameters         |  Type | Sample|
+|Nested objects{}| Parameters         |  Type | Sample|
 |--------------|-------------------|-------| -----|
+|error        | category       | String| "Video Player Error" |
+|       | code       | String| "API_SERVICE_PLAYBACK_RESUMEPOINTS_UNAVAILABLE" |
 |playback      | articleName       | String| "AWS GP de Canadá | Carrera" |
 |              | articleId         | String| "4ipwu1ze6b7a1az4ztflqyluw"|
 |              | competitionId     | String| "6rqw7bnjivfrz93gae0lboea4"|
