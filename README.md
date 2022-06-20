@@ -25,4 +25,8 @@
 |              | sportname     | String| "Motor"|
 |              | type     | String| "vod"|
 |player              | playbackSessionId | String| "1655716256365-1afc44bd767b-y44drrjcqtxa18g3arxjz58ge-e91811"|
+|application              | type | String| "web.hybrid.2"|
+|                   | version | String| "9.13.0"|
+|                   | platform | String| "web"|
+
 
