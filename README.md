@@ -25,8 +25,19 @@
 |              | sportname     | String| "Motor"|
 |              | type     | String| "vod"|
 |player              | playbackSessionId | String| "1655716256365-1afc44bd767b-y44drrjcqtxa18g3arxjz58ge-e91811"|
+|          | liveEdge | Boolean| true|
+|          | playerState | String| "start"|
+|          | videoType | String| "watch party"|
 |application              | type | String| "web.hybrid.2"|
 |                   | version | String| "9.13.0"|
 |                   | platform | String| "web"|
+|watchParty         | watchRoomId | String| "1655716256365-1afc44bd767b-y44drrjc"|
+|         | watchRoomName | String| "ForzaFerrari-Tifosi" |
+|         | hostId | String| "07c53c0f6"|
+|         | guestIds | Array| ["2233c0f6", "123450f6", "12346876p"]|
+|         | watchRoomStatus | String| "started"|
+|         | liveChatStarted | Boolean| true |
+
+
 
 
