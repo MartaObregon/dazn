@@ -1,3 +1,20 @@
+# Watch Party data model (events)
+## DAZN - Case Study
+
+## Description
+The new feature allows up to 4 DAZN customers to watch a sport event from the same “watch room”, which offers synchronized streaming and allows users to interact with each other through a live chat functionality as well as through camera and microphone. This feature is implemented to revolutionize the way users watch our content and make the streaming experience more fun and interactive, which should contribute to increased engagement and retention on the platform.
+
+
+
+
+
+
+## Event Schema and samples
+
+### Initiation of the Watch Party streaming through CTA click
+![The San Juan Mountains are beautiful!](/assets/images/san-juan-mountains.jpg "San Juan Mountains")
+
+
 |              |                   |  
 | -------------| ------------------|
 | event        | watchPartyStart   |
@@ -96,7 +113,7 @@
     "clientId": "007c53c0f6",
     "customerId": "1afc44bd767b",
     "User Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36",
-    "gtm.uniqueEventId": 99
+    "gtm.uniqueEventId": 102,
 }
 ```
 
@@ -145,7 +162,7 @@
     "clientId": "007c53c0f6",
     "customerId": "1afc44bd767b",
     "User Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36",
-    "gtm.uniqueEventId": 34
+    "gtm.uniqueEventId": 34,
 }
 ```
 
