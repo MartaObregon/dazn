@@ -1,9 +1,50 @@
-|              |                   |
+|              |                   |  
 | -------------| ------------------|
 | event        | watchPartyStart   |
 | category     | watch party       | 
 | action       | start             |
 | label        | {{itemId}}        | 
+
+
+```json
+{
+    "event": "watchPartyStart",
+    "watchParty": {
+        "itemType": "article",
+        "itemId": "17vb4ds80aga7916d0dc6gvbn",
+        "itemName": "Abierto de Eastbourne | Día 2",
+    },
+    "playback": {
+        "articleName": "AWS GP de Canadá | Carrera",
+        "articleId": "n6rmhypv1xke1d9e4icohclab",
+        "competitionId": "2slaywwom6tyirsmaukgu5mty",
+        "competitionName": "Torneo de Eastbourne",
+        "sportId": "4rheplujt9zryv3fqvtu1jpah",
+        "sportname": "Tenis",
+        "type": "live", 
+        
+    },
+    "player": {
+        "playbackSessionId": "1655736158523-1afc44bd767b-n6rmhypv1xke1d9e4icohclab-532bc9", 
+         "liveEdge":true,
+         "playerState":"start",
+         "videoType": "watch party",
+         
+    },
+    "application": {
+        "type": "web.hybrid.2",
+        "version": "9.13.0-hotfix.1.130",
+        "device": {
+            "platform": "web"
+        }
+    },
+    "clientId": "007c53c0f6",
+    "customerId": "1afc44bd767b",
+    "User Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36",
+    "gtm.uniqueEventId": 99
+}
+```
+
 
 |              |                   |
 | -------------| ------------------|
@@ -12,19 +53,102 @@
 | action       | join|
 | label        | {{watchRoomId}}        | 
 
+
+```json
+{
+    "event": "watchPartyStart",
+    "watchParty": {
+        "itemType": "article",
+        "itemId": "17vb4ds80aga7916d0dc6gvbn",
+        "itemName": "Abierto de Eastbourne | Día 2",
+        "watchRoomId": "23094yjhwkjh29343298n",
+        "watchRoomName": "MuguruzaFANCLUB!!",
+        "hostId": "1afc44bd767b",
+        "guestIds": ["892731jbm", "9d92jd73"],
+        "watchPartyStatus" : "started",
+        "liveChatStarted" : false,
+        
+    },
+    "playback": {
+        "articleName": "Abierto de Eastbourne | Día 2",
+        "articleId": "n6rmhypv1xke1d9e4icohclab",
+        "competitionId": "2slaywwom6tyirsmaukgu5mty",
+        "competitionName": "Torneo de Eastbourne",
+        "sportId": "4rheplujt9zryv3fqvtu1jpah",
+        "sportname": "Tenis",
+        "type": "live", 
+        
+    },
+    "player": {
+        "playbackSessionId": "1655736158523-1afc44bd767b-n6rmhypv1xke1d9e4icohclab-532bc9", 
+         "liveEdge":true,
+         "playerState":"start",
+         "videoType": "watch party",
+         
+    },
+    "application": {
+        "type": "web.hybrid.2",
+        "version": "9.13.0-hotfix.1.130",
+        "device": {
+            "platform": "web"
+        }
+    },
+    "clientId": "007c53c0f6",
+    "customerId": "1afc44bd767b",
+    "User Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36",
+    "gtm.uniqueEventId": 99
+}
+```
+
 |              |                   |
 | -------------| ------------------|
 | event    | error            |
 | category     | watch party error | 
-| action       | modal popup shown|
+| action       | modal error shown|
 | label        | true              | 
 
 |              |                   |
 | -------------| ------------------|
 | event    | error            |
 | category     | watch party error | 
-| action       | modal popup closed|
+| action       | modal error closed|
 | label        | true              | 
+
+```json
+
+{
+    "event": "error",
+    "error": {
+        "category": "Watch Party Initialization Error",
+        "code": "API_SERVICE_PLAYBACK_RESUMEPOINTS_UNAVAILABLE"
+    },
+        "playback": {
+        "articleName": "Abierto de Eastbourne | Día 2",
+        "articleId": "n6rmhypv1xke1d9e4icohclab",
+        "competitionId": "2slaywwom6tyirsmaukgu5mty",
+        "competitionName": "Torneo de Eastbourne",
+        "sportId": "4rheplujt9zryv3fqvtu1jpah",
+        "sportname": "Tenis",
+        "type": "live", 
+        
+    },
+    "player": {
+        "playbackSessionId": "1655738645337-1afc44bd767b-n6rmhypv1xke1d9e4icohclab-ff723b"
+    },
+    "application": {
+        "type": "web.hybrid.2",
+        "version": "9.13.0-hotfix.1.130",
+        "device": {
+            "platform": "web"
+        }
+    },
+    "clientId": "007c53c0f6",
+    "customerId": "1afc44bd767b",
+    "User Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36",
+    "gtm.uniqueEventId": 34
+}
+```
+
 
 |   Event Parameters    |       Type        | Sample         |
 | -------------    | ------------------|----------------|
@@ -54,6 +178,8 @@
 |          | videoType | String| "watch party"|
 |application              | type | String| "web.hybrid.2"|
 |                   | version | String| "9.13.0"|
+|                   | device | object| {}|
+|device                  | platform | String| "web"|
 |                   | platform | String| "web"|
 |watchParty         | itemId | String| "17vb4ds80aga7916d0dc6gvbn"|
 |         | itemType | String| "article"|
@@ -62,7 +188,7 @@
 |         | watchRoomName | String| "ForzaFerrari!!"|
 |         | hostId | String| "07c53c0f6"|
 |         | guestIds | Array| ["2233c0f6", "123450f6", "12346876p"]|
-|         | watchRoomStatus | String| "started"|
+|         | watchPartyStatus | String| "started"|
 |         | liveChatStarted | Boolean| true |
 
 
