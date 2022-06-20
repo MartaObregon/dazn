@@ -1,9 +1,18 @@
 |              |                   |
 | -------------| ------------------|
-| Event Name   | error            |
-| Category     | Watch Party Error | 
-| Action       | modal pop up shown|
-| Label        | true              | 
+| event        | watchPartyStart   |
+| category     | watch party       | 
+| action       | start             |
+| label        | {{itemId}}        | 
+
+
+
+|              |                   |
+| -------------| ------------------|
+| event    | error            |
+| category     | Watch Party Error | 
+| action       | modal pop up shown|
+| label        | true              | 
 
 |   Event Parameters    |       Type        | Sample         |
 | -------------    | ------------------|----------------|
@@ -31,7 +40,10 @@
 |application              | type | String| "web.hybrid.2"|
 |                   | version | String| "9.13.0"|
 |                   | platform | String| "web"|
-|watchParty         | watchRoomId | String| "1655716256365-1afc44bd767b-y44drrjc"|
+|watchParty         | itemId | String| "17vb4ds80aga7916d0dc6gvbn"|
+|         | itemType | String| "article"|
+|         | itemName | String| "Abierto de Eastbourne | Día 2"|
+|         | watchRoomId | String| "1655716256365-1afc44bd767b-y44drrjc"|
 |         | watchRoomName | String| "ForzaFerrari!!"|
 |         | hostId | String| "07c53c0f6"|
 |         | guestIds | Array| ["2233c0f6", "123450f6", "12346876p"]|
