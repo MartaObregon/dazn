@@ -10,7 +10,7 @@ The new feature allows up to 4 DAZN customers to watch a sport event from the sa
 
 ### 1. Initiation of the Watch Party streaming through CTA click - [PROD-1283](https://duckduckgo.com)
 
-[Sample output](https://github.com/MartaObregon/dazn/edit/main/README.md#1-sample-for-initiation-of-the-watch-party-streaming-through-cta-click) 
+[Sample output](#1-sample-for-initiation-of-the-watch-party-streaming-through-cta-click) 
 
 |              |                   |  
 | -------------| ------------------|
@@ -23,7 +23,7 @@ The new feature allows up to 4 DAZN customers to watch a sport event from the sa
 
 ### 2. Successful joining of the Watch Party “room - [PROD-5683](https://duckduckgo.com)
 
-[Sample output](https://github.com/MartaObregon/dazn/edit/main/README.md#1-sample-for-successfull-joining-of-the-watch-party-room) 
+[Sample output](#2-sample-for-successfull-joining-of-the-watch-party-room) 
 
 |              |                   |
 | -------------| ------------------|
@@ -35,7 +35,7 @@ The new feature allows up to 4 DAZN customers to watch a sport event from the sa
 
 
 ### 3. Being presented with the Watch Party initialization error modal - [PROD-3321](https://duckduckgo.com)
-[Sample output](https://github.com/MartaObregon/dazn/edit/main/README.md#3-sample-for-being-presented-with-the-watch-party-initialization-error-modal) 
+[Sample output](#3-sample-for-being-presented-with-the-watch-party-initialization-error-modal) 
 
 
 |              |                   |
@@ -46,7 +46,7 @@ The new feature allows up to 4 DAZN customers to watch a sport event from the sa
 | label        | true              | 
 
 ### 4. Dismissing the error modal through “CLOSE” cta click - - [PROD-1112](https://duckduckgo.com)
-[Sample output](https://github.com/MartaObregon/dazn/edit/main/README.md#4-sample-for-dismissing-the-error-modal-through-close-cta-click) 
+[Sample output](#4-sample-for-dismissing-the-error-modal-through-close-cta-click) 
 
 |              |                   |
 | -------------| ------------------|
